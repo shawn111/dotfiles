@@ -1,0 +1,54 @@
+Host *
+    forwardagent yes
+    forwardx11 yes
+    forwardx11trusted yes
+    StrictHostKeyChecking no 
+    #TunnelDevice yes
+    #TunnelDevice any:any
+    LogLevel                ERROR 
+    UserKnownHostsFile /dev/null 
+    #SendEnv LANG LC_*
+    HostKeyAlgorithms +ssh-ed25519
+    HostKeyAlgorithms +ssh-rsa
+    #HostKeyAlgorithms ssh-ed25519,ssh-rsa
+    #PubkeyAcceptedAlgorithms ssh-ed25519,ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa
+
+Host ulo
+  Hostname github.com
+  User git
+  IdentityFile ~/.ssh/ulo
+
+Host eink
+  Hostname 10.1.1.28
+  User u0_a86
+  Port 8022
+
+Host chat
+  #HostName chat.easystack.io
+  HostName 211.103.144.10
+  ProxyJump jitsi-s
+
+Host chat-staging.easystack.io
+  StrictHostKeyChecking no
+  ProxyJump jitsi-s
+
+Host chat.bj
+  HostName 172.45.0.217
+
+Host chat-b.bj
+  User root
+  HostName 172.45.0.231
+
+Host review.easystack.cn
+  User shawn.wang
+  Port 29418
+
+Host mm
+  HostName 140.116.247.125
+  Port 18922
+  User ubuntu
+
+Host ecpaas
+  HostName ecpaas.ddns.net
+  User root
