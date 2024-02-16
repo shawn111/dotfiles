@@ -8,5 +8,8 @@ Initializing repo in "/home/shawn/.dotfiles"
 Initialized empty Git repository in /var/home/shawn/.dotfiles/.git/
 
 
+## sops
+
+git filter
 
 ## exmaple

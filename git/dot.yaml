@@ -1,0 +1,10 @@
+linux:
+  links:
+    config: ~/.gitconfig
+    gitconfig.easystack: ~/.config/git/gitconfig.easystack
+    scripts/sops_decrypt.sh: ~/.config/git/scripts/sops_decrypt.sh
+    scripts/sops_encrypt.sh: ~/.config/git/scripts/sops_encrypt.sh
+    age.pub: ~/.config/git/age.pub
+    age.key: ~/.config/git/age.key
+  installs:
+    cmd: echo need prepare age.key ; test -f ~/.dotfiles/git/age.key

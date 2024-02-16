@@ -1,0 +1,18 @@
+[user]
+    name = Shawn Wang
+    email = shawn111@gmail.com
+
+[alias]
+    st = status
+    ci = commit
+
+[includeIf "gitdir:~/easystack/"]
+    path = ~/.config/git/gitconfig.easystack
+
+[includeIf "gitdir:~/escl-switch/"]
+    path = ~/.config/git/gitconfig.easystack
+
+[filter "sops"]
+    smudge = ~/.config/git/scripts/sops_decrypt.sh
+    clean = ~/.config/git/scripts/sops_encrypt.sh
+    required = true
