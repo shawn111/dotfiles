@@ -1,0 +1,10 @@
+pane_frames false
+
+keybinds {
+  normal {
+    unbind "Ctrl p"
+    bind "Ctrl f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+    unbind "Ctrl t"
+    unbind "Ctrl n"
+  }
+}

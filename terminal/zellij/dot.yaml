@@ -1,0 +1,4 @@
+linux:
+  links:
+    config.kdl: ~/.config/zellij/config.kdl
+  installs: echo "xxx"
