@@ -1,6 +1,6 @@
 [shawn's dot & docs](./README.md)
 
-- [rotz](./rotz/rotz.md)
-- [cargo-binstall](./cargo-binstall/cargo-binstall.md)
-- [cli-stack](./terminal/cli-stack.md)
+- [rotz - Rust Dotfile manager](./rotz/rotz.md)
+- [Rusty cli-stack](./terminal/cli-stack.md)
 - [utils](./utils/README.md)
+  - [cargo-binstall](./cargo-binstall/cargo-binstall.md)
