@@ -1,0 +1,5 @@
+[book]
+authors = ["Shawn Wang"]
+language = "en"
+multilingual = false
+src = "."
