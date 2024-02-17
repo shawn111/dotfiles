@@ -1,0 +1,2 @@
+linux:
+  installs: ~/.dotfiles/cargo-binstall/whyq/install.sh

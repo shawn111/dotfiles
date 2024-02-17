@@ -1,0 +1,1 @@
+../cargo-binstall/install.sh
