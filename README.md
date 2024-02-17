@@ -1,4 +1,4 @@
-# dotfiles w/ notes
+# dotfiles with notes
 
 Rust related toolsets are so powerful, such as fish / zelllij / helix / wezterm.
 However, switch from orignal work flows to setup lots of machines are quite painful.
