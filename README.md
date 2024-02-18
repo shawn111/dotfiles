@@ -1,6 +1,6 @@
 # dotfiles with notes
 
-## why combind dotfiles with document
+## Why combind dotfiles with document
 
 Write documents help me and maybe others, but I'm too lazy.
 I thought combind two of them are convince for maintain.
@@ -16,14 +16,17 @@ Although, most of them are linux and my major env is terminal but they are very 
 An easy way to configure or update all my terminal envs would help me a lots.
 
 
-## switch to whole new toolset
+## Switch to whole new toolset
 
 Rust related toolsets are so powerful, such as fish / zelllij / helix / wezterm.
 However, switch from orignal work flows to setup lots of machines are quite painful.
 
+## No just dotfiles
+
 Likely, I found rotz to maintain my dotfiles.
 Then I realized it is supur match with all drop-in sytles files.
 I'm planning not just keep config file but also documents about howto use them.
+
 
 ## hacking
 
