@@ -3,3 +3,6 @@ authors = ["Shawn Wang"]
 language = "en"
 multilingual = false
 src = "."
+
+git-repository-url = "https://github.com/shawn111/dotfiles"
+edit-url-template = "https://github.com/shawn111/dotfiles/edit/main/guide/{path}"
