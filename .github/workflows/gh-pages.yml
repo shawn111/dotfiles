@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
@@ -35,8 +35,8 @@ jobs:
       - name: Build mdBook
         uses: peaceiris/actions-mdbook@v1
         with:
-          mdbook-version: '0.4.10'
-          # mdbook-version: 'latest'
+          #mdbook-version: '0.4.10'
+          mdbook-version: 'latest'
       - run: mdbook build
 
       - name: Upload artifact
