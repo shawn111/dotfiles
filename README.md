@@ -1,5 +1,8 @@
 # dotfiles with notes
 
+2024 Shawn's whole new workflow
+
+
 ## Why combind dotfiles with document
 
 Write documents help me and maybe others, but I'm too lazy.

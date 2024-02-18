@@ -4,5 +4,8 @@ language = "en"
 multilingual = false
 src = "."
 
+[output.html]
 git-repository-url = "https://github.com/shawn111/dotfiles"
-edit-url-template = "https://github.com/shawn111/dotfiles/edit/main/guide/{path}"
+edit-url-template = "https://github.com/shawn111/dotfiles/edit/main/{path}"
+
+[preprocessor.presentation-preprocessor]
