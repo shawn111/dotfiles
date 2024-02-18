@@ -23,6 +23,8 @@ fi
 
 PATH=~/bin:$PATH
 
+mkdir -p ~/bin ~/.cargo/bin
+
 if [ "$(whereis cargo-binstall)" == "cargo-binstall:" ] ; then
    curl -k -L -O $URL
    tar ${TAR_FUN} $FN
