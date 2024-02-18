@@ -2,6 +2,9 @@
 
 2024 Shawn's whole new workflow
 
+[![asciinema CLI
+demo](https://asciinema.org/a/LKbr8pKvHGJoCNouNKWKe8PSL.svg)](https://asciinema.org/a/LKbr8pKvHGJoCNouNKWKe8PSL?autoplay=1)
+
 
 ## Why combind dotfiles with document
 
