@@ -6,11 +6,22 @@ In my dotfiles config, rotz would rely on cargo-binstall to install.
 
 # For Develop to enable binstall with GitHub Actions
 
+
 More information, https://github.com/marketplace/actions/install-development-tools
-TODO  (not test, yet)
+
+current config: https://github.com/shawn111/dotfiles/blob/main/.github/workflows/gh-pages.yml
 
 ```
-- uses: cargo-bins/cargo-binstall@main
+jobs:
+  build:
+    ...
+    steps:
+      ...
+      - name: Prepare cargo-binstall
+        uses: cargo-bins/cargo-binstall@main
+      - name: Install mdbook
+        run: cargo binstall -y mdbook mdbook-presentation-preprocessor
+      - name: Build mdBook
+        run: mdbook build
+
 ```
-
-
