@@ -1,4 +1,0 @@
-command="/bin/echo You invoked: $SSH_ORIGINAL_COMMAND"
-#,no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,no-user-rc,restrict ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILcu/2WrtCCcfSv+Pia1kxcNt8LU970iwqS6UeReVoSg shawn111@penguin@cm3
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICTI07nWkteqR4v5K/luMYNBRqjMSov/OIfzT25w5Q0u shawn111@penguin@cm3
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILcu/2WrtCCcfSv+Pia1kxcNt8LU970iwqS6UeReVoSg shawn111@penguin@cm3
