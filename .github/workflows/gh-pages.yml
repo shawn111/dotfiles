@@ -51,11 +51,5 @@ jobs:
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
         id: deployment
-        env:
-          github_token: ${{ secrets.SS_GITHUB_TOKEN }}
-        with:
-          external_repository: shawn111/shawn111.github.io
-          publish_branch: master  # default: gh-pages
-          publish_dir: ./book
+        uses: actions/deploy-pages@v4
