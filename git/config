@@ -16,3 +16,8 @@
     smudge = ~/.config/git/scripts/sops_decrypt.sh
     clean = ~/.config/git/scripts/sops_encrypt.sh
     required = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
