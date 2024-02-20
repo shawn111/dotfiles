@@ -9,3 +9,13 @@ git-repository-url = "https://github.com/shawn111/dotfiles"
 edit-url-template = "https://github.com/shawn111/dotfiles/edit/main/{path}"
 
 [preprocessor.presentation-preprocessor]
+
+
+[preprocessor.cmdrun]
+
+
+[preprocessor.autosummary]
+# This is so that mdBook doesn't start regenerating
+# deleted folders before autosummary can remove them from SUMMARY.md
+[build]
+create-missing = false

@@ -35,7 +35,7 @@ jobs:
       - name: Prepare cargo-binstall
         uses: cargo-bins/cargo-binstall@main
       - name: Install mdbook
-        run: cargo binstall -y mdbook mdbook-presentation-preprocessor
+        run: cargo binstall -y mdbook mdbook-presentation-preprocessor mdbook-autosummary
       - name: Build mdBook
         run: mdbook build
       - name: Upload artifact
