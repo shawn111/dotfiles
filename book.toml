@@ -19,3 +19,4 @@ edit-url-template = "https://github.com/shawn111/dotfiles/edit/main/{path}"
 # deleted folders before autosummary can remove them from SUMMARY.md
 [build]
 create-missing = false
+build-dir = "../dotfiles-book"

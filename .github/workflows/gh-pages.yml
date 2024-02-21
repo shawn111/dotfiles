@@ -39,7 +39,7 @@ jobs:
       - name: workaround for mdbook-autosummary
         run: mv README.md index.md
       - name: Build mdBook
-        run: mdbook build
+        run: mdbook build --dest-dir ./book
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
