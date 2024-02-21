@@ -12,6 +12,9 @@
 [includeIf "gitdir:~/escl-switch/"]
     path = ~/.config/git/gitconfig.easystack
 
+[includeIf "gitdir:~/escl-upgrade/"]
+    path = ~/.config/git/gitconfig.easystack
+
 [filter "sops"]
     smudge = ~/.config/git/scripts/sops_decrypt.sh
     clean = ~/.config/git/scripts/sops_encrypt.sh

@@ -1,7 +1,11 @@
 linux:
   links:
+{{ #if (eq whoami.hostname "kojid-x86_64-h45") }}
+    gitconfig.easystack: ~/.gitconfig
+{{ else }}
     config: ~/.gitconfig
     gitconfig.easystack: ~/.config/git/gitconfig.easystack
+{{ /if }}
     scripts/sops_decrypt.sh: ~/.config/git/scripts/sops_decrypt.sh
     scripts/sops_encrypt.sh: ~/.config/git/scripts/sops_encrypt.sh
     age.pub: ~/.config/git/age.pub
