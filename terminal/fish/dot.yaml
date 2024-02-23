@@ -1,0 +1,7 @@
+linux:
+  links:
+    # conf.d: ~/.config/fish/conf.d
+    config.fish: ~/.config/fish/config.fish
+    fish_variables: ~/.config/fish/fish_variables
+    functions/fisher.fish: ~/.config/fish/functions/fisher.fish
+    completions/fisher.fish: ~/.config/fish/completions/fisher.fish
