@@ -1,9 +1,12 @@
-# Zellij
+# My awesome cli collection
+
+## zellij
+
+## comtrya / rotz
+
+## fish (SHELL)
+
+## wezterm 
 
 
-# FISH (SHELL)
-
-# Wezterm 
-
-
-# Helix
+## helix
