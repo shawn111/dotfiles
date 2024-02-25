@@ -1,0 +1,19 @@
+# Comtrya.yaml
+
+actions:
+  - action: file.link
+    from: .
+    to: "{{ user.home_dir }}/xx"
+
+
+#linux:
+#  links:
+#    conf.d/path.fish: ~/.config/fish/conf.d/path.fish
+#    config.fish: ~/.config/fish/config.fish
+#    fish_variables: ~/.config/fish/fish_variables
+#    functions/fisher.fish: ~/.config/fish/functions/fisher.fish
+#    completions/fisher.fish: ~/.config/fish/completions/fisher.fish
+#    functions/tide.fish: ~/.config/fish/functions/tide.fish
+#    completions/tide.fish: ~/.config/fish/completions/tide.fish
+
+#  installs: tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time=No --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Slanted --powerline_prompt_tails=Sharp --powerline_prompt_style='Two lines, character and frame' --prompt_connection=Solid --powerline_right_prompt_frame=Yes --prompt_connection_andor_frame_color=Darkest --prompt_spacing=Compact --icons='Many icons' --transient=Yes
