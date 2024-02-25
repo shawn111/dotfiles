@@ -1,0 +1,4 @@
+actions:
+  - action: file.copy
+    from: wezterm.lua
+    to: "{{ user.home_dir }}/.wezterm.lua"
