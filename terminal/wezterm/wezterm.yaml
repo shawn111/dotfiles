@@ -1,3 +1,5 @@
+# Comtrya.yaml
+
 actions:
   - action: file.copy
     from: wezterm.lua
