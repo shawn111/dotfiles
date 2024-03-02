@@ -17,6 +17,10 @@ edit-url-template = "https://github.com/shawn111/dotfiles/edit/main/{path}"
 [preprocessor.autosummary]
 # This is so that mdBook doesn't start regenerating
 # deleted folders before autosummary can remove them from SUMMARY.md
+
+# If true, files that start with . or _ are ignored.
+ignore-hidden = true
+
 [build]
 create-missing = false
-build-dir = "../dotfiles-book"
+build-dir = "_book"

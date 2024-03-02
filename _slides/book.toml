@@ -1,0 +1,19 @@
+[book]
+authors = ["Ferrous Systems"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Rust Training Slides by Ferrous Systems"
+
+#[preprocessor.autosummary]
+## This is so that mdBook doesn't start regenerating
+## deleted folders before autosummary can remove them from SUMMARY.md
+#
+## If true, files that start with . or _ are ignored.
+#ignore-hidden = true
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output.html.playground]
+copyable = true          # include the copy button for copying code snippets
