@@ -1,0 +1,10 @@
+# example https://github.com/comtrya/comtrya/blob/main/examples/Comtrya.yaml
+
+manifest_paths:
+  - .
+
+variables:
+  fkbr: "sxoe"
+  kuci: "xhpv"
+
+
