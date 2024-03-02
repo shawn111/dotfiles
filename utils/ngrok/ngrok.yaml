@@ -1,0 +1,8 @@
+linux:
+  links:
+    ngrok.service: ~/.local/share/systemd/user/ngrok.service
+
+actions:
+  - action: file.copy
+    from: ngrok.service
+    to: "{{ user.data_dir }}/systemd/user/ngrok.service"

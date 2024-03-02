@@ -1,3 +1,0 @@
-linux:
-  links:
-    ngrok.service: ~/.local/share/systemd/user/ngrok.service
