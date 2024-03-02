@@ -1,6 +1,6 @@
 # Comtrya.yaml
 
 actions:
-  - action: file.copy
+  - action: file.link
     from: wezterm.lua
     to: "{{ user.home_dir }}/.wezterm.lua"
