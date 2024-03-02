@@ -1,0 +1,9 @@
+
+#settings:
+#  shell:
+#    program: /usr/bin/fish
+instructions:
+  - !Command
+    command: echo $SHELL
+  - !Command
+    command: echo $SHELL

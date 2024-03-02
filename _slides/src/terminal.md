@@ -1,1 +1,1 @@
-../../terminal/index.md
+../../collections/terminal/index.md

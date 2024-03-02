@@ -3,7 +3,7 @@
 actions:
   - action: file.link
     from: .
-    to: "{{ user.home_dir }}/xx"
+    to: "{{ user.home_dir }}/.config/fish"
 
 
 #linux:
