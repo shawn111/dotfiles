@@ -2,3 +2,4 @@ age.key
 book/
 #_book/
 _*
+./collections/index.md

@@ -2,7 +2,7 @@
 authors = ["Shawn Wang"]
 language = "en"
 multilingual = false
-src = "."
+src = "collections"
 
 [output.html]
 git-repository-url = "https://github.com/shawn111/dotfiles"

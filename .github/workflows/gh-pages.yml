@@ -37,7 +37,7 @@ jobs:
       - name: Install mdbook
         run: cargo binstall -y mdbook mdbook-presentation-preprocessor mdbook-autosummary
       - name: workaround for mdbook-autosummary
-        run: mv README.md index.md
+        run: mv collections/README.md collections/index.md
       - name: Build mdBook
         run: mdbook build --dest-dir ./book
       - name: Upload artifact

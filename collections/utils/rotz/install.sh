@@ -1,1 +1,1 @@
-../cargo-binstall/install.sh
+../../cargo/cargo-binstall/install.sh
