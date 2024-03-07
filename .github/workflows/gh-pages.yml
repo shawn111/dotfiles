@@ -35,7 +35,7 @@ jobs:
       - name: Prepare cargo-binstall
         uses: cargo-bins/cargo-binstall@main
       - name: Install mdbook
-        run: cargo binstall -y mdbook mdbook-presentation-preprocessor mdbook-autosummary
+        run: cargo binstall -y mdbook mdbook-presentation-preprocessor mdbook-autosummary mdbook-mermaid mdslides
       - name: workaround for mdbook-autosummary
         run: mv collections/README.md collections/index.md
       - name: Build mdBook
