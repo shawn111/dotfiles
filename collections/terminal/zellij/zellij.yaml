@@ -1,0 +1,9 @@
+#linux:
+#  links:
+#    config.kdl: ~/.config/zellij/config.kdl
+#  installs: echo "xxx"
+
+actions:
+  - action: file.link
+    from: config.kdl
+    to: "{{ user.home_dir }}/.config/zellij/config.kdl"
