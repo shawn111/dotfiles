@@ -1,11 +1,11 @@
 # My awesome Rust CLI collection
 
 ---
-<!-- end_slide -->
-
-# Why Rust (from wg-cli)
+### Why Rust (from wg-cli)
 
 [](https://www.rust-lang.org/what/cli)
+
+<!--web-only-->
 
 * Solid and quick
 * Easy distribution
@@ -19,11 +19,11 @@
   - talking to humans
   - talking to machines
 * Flexible logging
+<!--web-only-end-->
+
 
 ---
-<!-- end_slide -->
-
-# Why rust-cli for me?
+### Why rust-cli for me?
 * a lot of resource
   - community
     - youtube / discord / zulipchat
@@ -31,7 +31,6 @@
 * for learning rust
 
 ---
-<!-- end_slide -->
 
 ## wezterm: Terminal Emulator / Multiplexer
 
@@ -44,6 +43,9 @@
   - https://github.com/tonsky/FiraCode#fira-code-monospaced-font-with-programming-ligatures
 - Kitty graphics support
 - Sixel graphics support
+
+---
+<!-- end_slide -->
 
 https://wezfurlong.org/wezterm/features.html#available-features
 
@@ -73,8 +75,7 @@ https://wezfurlong.org/wezterm/features.html#available-features
 
 ## fish (SHELL)
 
-- 2.x C++ + rust
-- 3.x pure rust
+- 3.x C++ + rust https://github.com/fish-shell/fish-shell/blob/master/doc_internal/fish-riir-plan.md
 
 pros:
 - autosuggestion, history default enable
