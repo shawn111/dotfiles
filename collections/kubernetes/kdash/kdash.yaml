@@ -1,0 +1,5 @@
+actions:
+  - action: binary.github
+    name: k9s.tgz
+    directory: /tmp
+    repository: derailed/k9s

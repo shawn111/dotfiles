@@ -1,0 +1,18 @@
+actions:
+  - action: binary.github
+    name: krew.tgz
+    directory: /tmp
+    repository: kubernetes-sigs/krew
+  - action: command.run
+    command: tar
+    args:
+      - zxv
+      - --file=/tmp/krew.tgz
+      - -C
+      - "{{ user.home_dir }}/bin"
+      - "./krew-*"
+  - action: command.run
+    command: sh
+    args:
+      - "-c"
+      - "mv {{ user.home_dir }}/bin/krew-* {{ user.home_dir }}/bin/kubectl-krew"

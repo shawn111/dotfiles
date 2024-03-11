@@ -1,25 +1,24 @@
-# kubernetes
-
-
-
 ---
+
 options:
   implicit_slide_ends: true
 
 title: Kubernetes meets Rust
+author: Shawn Wang @ Netdb Tech Talks 2403
 
-author: Shawn Wang @ TOOCON 2402
+#<!-- #author: Shawn Wang @ TOOCON 2402 -->
 
 ---
 
-# Outline
+# kubernetes
+
+## Kubernetes meets Rust
+## Outline
  
 * What is Kubernetes?
   * Some Rust Kubernetes utilities
 * Why Rust is good for Kubernetes? (kube.rs)
 * Rust for other parts of Kubernetes.
-
------
 
 ## source
 
@@ -28,12 +27,76 @@ author: Shawn Wang @ TOOCON 2402
 
 <!-- end_slide -->
 
-# kubernetes overview
+# What is Container
 
+## Linux Container
+- chroot
+- cgroup
+- namespaces
+- capabilities
+- seccomp
+- AppArmour / SELinux
+
+## OCI Open Container Initiative
+- runtime
+  - runc 
+- image
+- distribution
+
+<!-- end_slide -->
+
+# kubernetes overview
 
 * k8s - **container orchestration engine** [](https://kubernetes.io/docs)
   - automating deployment / scaling
   - management containerized applications
+
+* Kubernetes is written in the Go language.
+  - Unlike Borg, which was written in C++
+  - announced in June, 2014 and version 1.0 was released on July 21, 2015
+
+* relatation with Docker
+  - OCI Established in June 2015 by Docker
+  - v1.24 in May 2022, the "dockershim" has been removed entirely
+
+* Linux foundation < CNCF < kubernetes
+
+<!-- end_slide -->
+
+# Componenents
+
+<!-- column_layout: [1, 2] -->
+
+<!-- column: 0 -->
+
+## Admin
+
+- kubectl
+- others
+  - helm
+  - kdash / k9s
+
+<!-- column: 1 -->
+
+## Control Plane (master)
+- kube-scheduler - assigns Pods to Nodes
+- kube-controller-manager
+- etcd
+- kube-api
+
+## Node
+
+- kubelet - kube agent
+  - cri Container Runtime Interface
+    - contianerd
+    - cri-o
+  - cni Container Network Interface
+  - csi Container Storage Interface
+- kube-proxy
+
+<!-- end_slide -->
+
+# Overview
 
 ```
       ┌─────────────────────────┐ ┌────┬────────────┐
@@ -48,37 +111,6 @@ kubectl             └───────┘   │└────┬──┴
       ││kube-controller-manager││     │ Node │
       └┴───────────────────────┴┘     └──────┘
 ```
-
-<!-- end_slide -->
-
-Componenents
----
-
-<!-- column_layout: [1, 3] -->
-
-<!-- column: 0 -->
-
-## Admin
-
-- kubectl
-- others
-  - helm
-  - kdash / k9s
-
-<!-- column: 1 -->
-
-## Control Plane
-- kube-scheduler - assigns Pods to Nodes
-- kube-controller-manager
-- etcd
-- kube-api
-
-## Node
-
-- kubelet - kube agent
-  - cri - contianerd / cri-o
-  - cni
-- kube-proxy
 
 <!-- end_slide -->
 
@@ -97,16 +129,43 @@ Componenents
   - $KUBECONFIG
   - kubectl config view
   - kubectl config view --raw
+
 <!-- column: 1 -->
 
 ```bash +exec
-kind create cluster -n toocon
+kind create cluster
 ```
 ```bash +exec
 podman ps
 ```
 ```bash +exec
+podman exec -it  kind-control-plane  bash
+```
+```bash +exec
 kubectl get pods -A
+```
+
+<!-- end_slide -->
+
+# Inside kind-control-plane
+
+containerd cli
+
+```bash +exec
+ctr -n k8s.io containers list
+```
+
+ cri-tools
+
+```bash +exec
+crictl ps
+```
+
+nerdctl
+- on the way, [](https://github.com/kubernetes-sigs/kind/pull/3429)
+
+```bash +exec
+nerdctl ps
 ```
 
 <!-- end_slide -->
@@ -153,7 +212,7 @@ status:
 ## application
 ### controller
 ### reconciler
-## CRD
+## CRD Custom Resource Definitions
 
 <!-- column: 1 -->
 
@@ -167,7 +226,7 @@ status:
 │kubectl │     │         └───────┤reconciler│
 └───┬────┘     │                 └────┬─────┘
     │          │                   update
-    │     ┌────▼────┐              `  │
+    │     ┌────▼────┐                 │
     └─────►kube api ◄─────────────────┘
           └─────────┘
 ```
@@ -180,8 +239,12 @@ status:
 - No garbage collection.
 - memory safe
 - performance
-- cargo
-- cli
+- cli (Rust-CLI wg) [](https://rust-cli.github.io/book/tutorial/index.html)
+- Easy distribution
+  - cargo install / binstall
+- Document / resources
+  - mdbook
+  - crates.io / docs.rs / lib.rs
 - kube.rs
 - kernel / M$ / ... love rust
 - ...
@@ -209,6 +272,7 @@ kube::client and kube::config modules.
 Common components for building Kubernetes operators
 
 <!-- end_slide -->
+-----
 
 ## KDash
 
@@ -233,6 +297,7 @@ Common components for building Kubernetes operators
 ```
   
 <!-- end_slide -->
+-----
 
 ## k8s-insider - an operator help to access you kubernetes cluster network
 
@@ -240,6 +305,9 @@ Common components for building Kubernetes operators
 k8s-insider install --pod-cidr 10.244.0.0/16
 k8s-insider create network
 k8s-insider connect
+
+## remove dns
+resolvconf -d insider0 -m 0 -x
 ```
 
 ```
@@ -259,13 +327,15 @@ k8s-... NodePort  10.96.153.40 <none>      1234:31237/UDP 54m
 
 # my shell env for k8s
 
-- starship - cross shell prompt
-- kubie kbs
+- fish
+  - starship - cross shell prompt
+  - kubie kbs kubesess
 - kdash
 - k8s-insider
 
 
 <!-- end_slide -->
+-----
 
 ## sidecar
 - Linkerd linkerd2 (Linkerd is a service mesh for Kubernetes.)
@@ -289,6 +359,7 @@ Qovery - Enable Developers Self-Service:  Terraform, Helm, Kubectl, and Docker
 Shulker - The modern way of putting Minecraft in boxes [](https://shulker.jeremylvln.fr/)
 
 <!-- end_slide -->
+-----
 
 - container related projects
   - youki
@@ -307,7 +378,7 @@ conmon-rs
 
 <!-- end_slide -->
 
-# hello
+# metrics
 
 metrics -> prometheus
 telemetry -> OpenTelemetry
@@ -320,12 +391,11 @@ telemetry -> OpenTelemetry
 
 <!-- end_slide -->
 
+
 ## kubectl plugins
 
-
-
-
 <!-- end_slide -->
+
 # Rust for other parts of Kubernetes.
 
 * container / vmm
@@ -333,6 +403,7 @@ telemetry -> OpenTelemetry
 
 
 <!-- end_slide -->
+
 
 k8sfwd
 k8s-insider

@@ -1,0 +1,18 @@
+actions:
+  - action: binary.github
+    name: kubesess.tgz
+    directory: /tmp
+    repository: Ramilito/kubesess
+  - action: command.run
+    command: tar
+    args:
+      - zxv
+      - --file=/tmp/kubesess.tgz
+      - -C
+      - "{{ user.home_dir }}/bin"
+      - "./target/*/release/kubesess"
+  - action: command.run
+    command: sh
+    args:
+      - "-c"
+      - "mv {{ user.home_dir }}/bin/target/*/release/kubesess {{ user.home_dir }}/bin/kubesess"
