@@ -36,8 +36,9 @@ jobs:
         uses: cargo-bins/cargo-binstall@main
       - name: Install mdbook
         run: cargo binstall -y mdbook mdbook-presentation-preprocessor mdbook-autosummary mdbook-mermaid mdslides
-      - name: workaround for mdbook-autosummary
-        run: mv collections/README.md collections/index.md
+        # csplit -z k.md /-----/ '{*}' -f abc -b "%03d.md"
+      #- name: workaround for mdbook-autosummary
+      #  run: mv collections/README.md collections/index.md
       - name: Build mdBook
         run: mdbook build --dest-dir ./book
       - name: Upload artifact
