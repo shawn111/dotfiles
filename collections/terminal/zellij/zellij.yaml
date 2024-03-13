@@ -5,5 +5,5 @@
 
 actions:
   - action: file.link
-    from: config.kdl
-    to: "{{ user.home_dir }}/.config/zellij/config.kdl"
+    from: .
+    to: "{{ user.home_dir }}/.config/zellij"

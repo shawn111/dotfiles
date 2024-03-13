@@ -4,8 +4,14 @@ keybinds {
   normal {
     unbind "Ctrl p"
     unbind "Ctrl a"
-    bind "Ctrl f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
     unbind "Ctrl t"
     unbind "Ctrl n"
+    bind "Ctrl f" { ToggleFocusFullscreen ; SwitchToMode "Normal"; }
+    // bind "Alt s" { ToggleStackPanes; SwitchToMode "Normal"; }
+    bind "Ctrl [" { PreviousSwapLayout; SwitchToMode "Normal"; }
+    bind "Ctrl ]" { NextSwapLayout; SwitchToMode "Normal"; }
   }
 }
+
+default_layout "compact"
+// layout_dir "~/.config/zellij/layouts"
